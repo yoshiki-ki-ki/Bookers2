@@ -27,7 +27,9 @@
             <% if user_signed_in? %>
             <li>Home</li>
             <li>Users</li>
-            <li>Books</li>
+            <li class="nav-item">
+              <%= link_to "Books", "/books", class: 'nav-link text-dark' %>
+            </li>
             <li class="nav-item">
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-dark' %>
             </li>
