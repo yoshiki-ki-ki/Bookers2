@@ -1,5 +1,5 @@
 <h2>Book detail</h2>
 <span>
-  <%= link_to book.title, book_path(@book.id) %>
+  <%= link_to @book.title, book_path(@book.id) %>
 </span>
 <p><%= @book.body %></p>
