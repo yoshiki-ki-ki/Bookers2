@@ -16,6 +16,8 @@
 <h4>Title</h4>
 <h4>Opinion</h4>
 <% @books.each do |book| %>
-  <span><%= book.title %></span>
+  <span>
+    <%= link_to book.title, book_path(book.id) %>
+  </span>
   <span><%= book.body %></span>
 <% end %>
