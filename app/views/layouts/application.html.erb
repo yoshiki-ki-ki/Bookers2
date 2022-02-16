@@ -15,7 +15,9 @@
     <header class="shadow-sm">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-
+          <ul class="nav-item">
+            <%= link_to "Bookers", root_path, class: 'nav-link text-dark' %>
+          </ul>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,11 +25,14 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
+            <li>Home</li>
+            <li>Users</li>
+            <li>Books</li>
             <li class="nav-item">
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-dark' %>
             </li>
             <% else %>
-              <li class="nav-item">
+            <li class="nav-item">
               <%= link_to "Home", root_path, class: 'nav-link text-dark' %>
             </li>
             <li class="nav-item">
