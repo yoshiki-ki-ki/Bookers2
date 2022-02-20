@@ -24,8 +24,8 @@
 <h4>Title</h4>
 <h4>Opinion</h4>
 <% @books.each do |book| %>
-  <%= link_to user_path(@users.user_id) do %>
-    <%= image_tag @users.user.get_profile_image(100,100) %>
+  <%= link_to user_path(book.user_id) do %>
+    <%= image_tag book.user.get_profile_image(100,100) %>
   <% end %>
   <span>
     <%= link_to book.title, book_path(book.id) %>
