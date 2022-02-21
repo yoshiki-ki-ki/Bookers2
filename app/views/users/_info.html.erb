@@ -14,5 +14,7 @@
   </tbody>
 </table>
 <div class="row">
-  <%= link_to "⚙", edit_user_path(user.id)%>
+  <%= link_to edit_user_path(user.id) do %>
+    <i class="fa-solid fa-user-gear"></i>
+  <% end %>
 </div>
