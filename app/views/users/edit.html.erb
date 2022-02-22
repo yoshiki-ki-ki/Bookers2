@@ -19,7 +19,7 @@
           <label for="user_name">Name</label>
         </div>
         <div class="field_with_errors">
-          <%= f.text_field :name, autofocus: true, id:"inputName" %>
+          <%= f.text_field :name, autofocus: true, id:"user_name", class: 'form-control' %>
         </div>
       </div>
       <div class="form-group">
@@ -28,10 +28,10 @@
       </div>
       <div class="form-group">
         <label for="user_introduction">Introduction</label><br>
-        <%= f.text_area :introduction, autofocus: true, id:"inputIntroduction" %>
+        <%= f.text_area :introduction, autofocus: true, id:"user_introduction", class: 'form-control introduction' %>
       </div>
       <div class="form-group">
-        <%= f.submit "Update User" %>
+        <%= f.submit "Update User", class: 'btn btn-secondary' %>
       </div>
       <% end %>
     </div>
